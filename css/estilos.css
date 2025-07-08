@@ -1,0 +1,122 @@
+/* ---------- TIPOGRAFÍA GENERAL ---------- */
+/* Establece la fuente principal para todo el sitio */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ---------- NAVBAR (barra de navegación) ---------- */
+/* Color de fondo blanco y sombra ligera para separación visual */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- VIDEO DE INICIO ---------- */
+/* Aplica bordes redondeados y sombra al video de bienvenida */
+.video-inicio video {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- TARJETAS DE PRODUCTOS ---------- */
+/* Animación al aparecer + efecto al pasar el mouse */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: zoomIn 1.2s ease-in-out; /* Animación 3 */
+}
+
+/* Aumenta el tamaño y sombra al pasar el mouse */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- BOTONES PRINCIPALES ---------- */
+/* Estilo del botón primario */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  transition: background-color 0.3s ease;
+  animation: pulse 2s infinite; /* Animación 5 */
+}
+
+/* Cambia de color al pasar el cursor */
+.btn-primary:hover {
+  background-color: #0a58ca;
+}
+
+/* ---------- PIE DE PÁGINA ---------- */
+/* Fondo oscuro, texto blanco, centrado, con animación */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  animation: fadeIn 2s ease-in; /* Animación 1 */
+}
+
+/* ---------- ANIMACIONES PERSONALIZADAS ---------- */
+
+/* Animación 1: fadeIn - aparece suavemente */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animated.anim-fade {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animación 2: slideUp - sube desde abajo */
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animated.anim-slide {
+  animation: slideUp 1.5s ease-in-out;
+}
+
+/* Animación 3: zoomIn - tarjetas se agrandan al aparecer */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animación 4: slideRight - entrada desde la izquierda */
+@keyframes slideRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.informacion .row > div {
+  animation: slideRight 1.5s ease;
+}
+
+/* Animación 5: pulse - resplandor suave en los botones */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0px rgba(13, 110, 253, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(13, 110, 253, 0.6);
+  }
+}
